@@ -1,0 +1,84 @@
+html {
+  font-size: 15px;
+  font-family: 'Baloo Bhai', cursive;
+}
+body {
+  color: #454545;
+}
+:selection {
+  background: #ffb7b7;
+  color: #fff;
+}
+
+.inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  margin: 60px auto;
+  max-width: 768px;
+}
+.inner h1 {
+	width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.icon {
+  display: inline-block;
+  position: relative;
+  padding: 36px;
+  cursor: zoom-in;
+}
+.icon img {
+  transition: all .05s ease;
+}
+.icon:hover img {
+  transform: scale(2);
+}
+.icon:hover:after {
+  content: attr(data-name);
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.75rem;
+  background: #454545;
+  color: #fff;
+  display: block;
+  padding: 3px 6px;
+  border-radius: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+.num {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 0.75rem;
+  color: #fff;
+  
+}
+.search {
+  color: #fff;
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+[data-name^="loader"] img {
+	animation: rotate .8s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
