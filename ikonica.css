@@ -32,42 +32,27 @@ body {
 .icon:hover img {
   transform: scale(2);
 }
-.icon:hover:after {
-  content: attr(data-name);
-  position: absolute;
-  top: -12px;
-  left: 0;
-  right: 0;
-  white-space: nowrap;
-  text-align: center;
-  font-size: 0.75rem;
-  background: #454545;
-  color: #fff;
-  display: block;
-  padding: 3px 6px;
-  border-radius: 2px;
-  font-family: 'Roboto', sans-serif;
-}
 .num {
   margin-top: 20px;
   text-align: center;
   width: 100%;
   font-size: 0.75rem;
-  color: #fff;
 
 }
 .search {
   color: #fff;
   position: absolute;
   font-family: 'Roboto', sans-serif;
-  top: 0;
+  font-size: 0.75rem;
+  top: -10px;
   left: 0;
   right: 0;
   text-align: center;
+  padding: 3px 6px;
+  border-radius: 2px;
 }
-.search:selection {
-  background: #ffb7b7;
-  color: #fff;
+.icon:hover .search {
+	background: #454545;
 }
 
 [data-name^="loader"] img {
