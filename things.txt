@@ -1,6 +1,0 @@
-<mask.*\)"\/>
-
-Fredroka One
-
-npm install -g svgo
-svgo -f icons

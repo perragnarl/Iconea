@@ -6,22 +6,22 @@ body {
   color: #454545;
 }
 
-.inner {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-  margin: 60px auto;
-  max-width: 768px;
-}
-.inner h1 {
-	width: 100%;
+h1 {
+  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 60px 0;
   letter-spacing: 1px;
   font-size: 2rem;
 }
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  margin: 0 auto;
+  max-width: 768px;
+}
 .icon {
-  display: inline-block;
   position: relative;
   padding: 36px;
   cursor: zoom-in;
@@ -32,10 +32,9 @@ body {
 .icon:hover img {
   transform: scale(2);
 }
-.num {
+footer {
   margin-top: 20px;
   text-align: center;
-  width: 100%;
   font-size: 0.75rem;
 
 }
@@ -55,7 +54,7 @@ body {
 	background: #454545;
 }
 
-[data-name^="loader"] img {
+.rotate img {
 	animation: rotate .8s linear infinite;
 }
 
