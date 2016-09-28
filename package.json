@@ -1,0 +1,16 @@
+{
+  "name": "iconea",
+  "version": "1.0.0",
+  "description": "Line icons",
+  "main": "index.php",
+  "keywords": [
+    "icons",
+    "line"
+  ],
+  "author": "Per-Ragnar Jonsson",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-svgo": "^0.1.0"
+  }
+}
