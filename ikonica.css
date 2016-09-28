@@ -5,10 +5,6 @@ html {
 body {
   color: #454545;
 }
-:selection {
-  background: #ffb7b7;
-  color: #fff;
-}
 
 .inner {
 	display: flex;
@@ -58,7 +54,7 @@ body {
   width: 100%;
   font-size: 0.75rem;
   color: #fff;
-  
+
 }
 .search {
   color: #fff;
@@ -68,6 +64,10 @@ body {
   left: 0;
   right: 0;
   text-align: center;
+}
+.search:selection {
+  background: #ffb7b7;
+  color: #fff;
 }
 
 [data-name^="loader"] img {
