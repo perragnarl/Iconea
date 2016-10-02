@@ -6,15 +6,15 @@ module.exports = function(grunt) {
 	var icons = '';
 	var counter = 0;
 	var list = function (path) {
-	fs.readdirSync(path).forEach(function (file) {
+		fs.readdirSync(path).forEach(function (file) {
 			filename = file.replace('.svg', '');
 			icons = icons +
-				'<div class="icon-container' + (filename === 'loader-ring' ? ' rotate' : '') + '">' +
-					'<svg class="icon">' +
-						'<use xlink:href="icons/symbol/svg/sprite.symbol.svg#' + filename + '"></use>' +
-					'</svg>' +
-					'<span class="search">' + filename + '</span>' +
-				'</div>'
+			'<div class="icon-container' + (filename === 'loader-ring' ? ' rotate' : '') + '">' +
+			'<svg class="icon">' +
+			'<use xlink:href="icons/symbol/svg/sprite.symbol.svg#' + filename + '"></use>' +
+			'</svg>' +
+			'<span class="search">' + filename + '</span>' +
+			'</div>'
 			counter++;
 		});
 	}
