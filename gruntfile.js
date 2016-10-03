@@ -5,20 +5,21 @@ module.exports = function(grunt) {
 	var filename = '';
 	var icons = '';
 	var counter = 0;
-	var list = function (path) {
-		fs.readdirSync(path).forEach(function (file) {
-			filename = file.replace('.svg', '');
+
+	fs.readdirSync('icons').forEach(function (file) {
+		filename = file.replace('.svg', '');
+		if (filename !== 'symbol') {
 			icons = icons +
 			'<div class="icon-container' + (filename === 'loader-ring' ? ' rotate' : '') + '">' +
-			'<svg class="icon">' +
-			'<use xlink:href="icons/symbol/svg/sprite.symbol.svg#' + filename + '"></use>' +
-			'</svg>' +
-			'<span class="search">' + filename + '</span>' +
+				'<svg class="icon">' +
+					'<use xlink:href="icons/symbol/svg/sprite.symbol.svg#' + filename + '"></use>' +
+				'</svg>' +
+				'<span class="search">' + filename + '</span>' +
 			'</div>'
 			counter++;
-		});
-	}
-	list('icons');
+		}
+	});
+
 	counter = '<div class="num">' + counter + ' icons and counting</div>';
 
 	grunt.initConfig({
@@ -58,7 +59,6 @@ module.exports = function(grunt) {
 					shape: {
 						id: {
 							generator: function(name) {
-								// Generate only #fragment-name as id inside svg sprite
 								return path.basename(name, '.svg');
 							}
 						},
