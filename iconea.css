@@ -1,6 +1,6 @@
 :root {
-	--color: #FDE3A7;
-	--background: #F2784B;
+	--color: #444;
+	--background: #fff;
 }
 
 html {
@@ -29,7 +29,7 @@ main {
 }
 .icon-container {
   position: relative;
-  padding: 36px;
+  padding: 24px;
 }
 .icon-container .icon {
   transition: all .05s ease;
