@@ -1,25 +1,32 @@
 :root {
-	--color: #444;
-	--background: #fff;
+	--solid: rgba(255, 255, 255, 1);
+	--opaque: rgba(255, 255, 255, 0.7);
+	--vague: rgba(255, 255, 255, 0.15);
+	--background: radial-gradient(ellipse at center, #76b852 0%,#8DC26F 100%);
+	--transparent: #76b852;
 }
-
 html {
   font-size: 15px;
-  font-family: 'Baloo Bhai', cursive;
+  font-family: 'Titillium Web', sans-serif;
 }
 body {
 	background: var(--background);
-  color: var(--color);
+  color: var(--opaque);
+	font-weight: 200;
 }
-
+header {
+	text-align: center;
+  margin: 60px 0;
+}
 h1 {
   width: 100%;
   text-align: center;
-  margin: 60px 0;
   letter-spacing: 2px;
-  font-size: 2rem;
+	margin: 0 0 10px 0;
+	font-weight: 200;
+  font-size: 2.6rem;
+	color: var(--solid);
 }
-
 main {
 	display: flex;
 	flex-wrap: wrap;
@@ -27,8 +34,22 @@ main {
   margin: 0 auto;
   max-width: 768px;
 }
+button {
+	border: none;
+	border-radius: 4px;
+	background: var(--opaque);
+	padding: 6px;
+	margin: 12px;
+	cursor: pointer;
+	outline: none;
+}
+button.selected {
+	background: var(--solid);
+}
+button .icon {
+	fill: var(--transparent);
+}
 .icon-container {
-  position: relative;
   padding: 24px;
 }
 .icon-container .icon {
@@ -36,38 +57,38 @@ main {
 }
 .icon-container:hover .icon {
   transform: scale(2);
+	fill: var(--solid);
+}
+.name {
+	color: var(--solid);
+	display: none;
+	font-size: 1.3rem;
 }
 .icon {
 	width: 24px;
 	height: 24px;
-	fill: var(--color);
+	fill: var(--opaque);
+	vertical-align: middle;
+}
+.list .icon-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid var(--vague);
+}
+.list .name {
+	margin-left: 60px;
+	display: inline;
 }
 footer {
-  margin-top: 20px;
+  margin: 20px 0;
   text-align: center;
-  font-size: 0.75rem;
+	font-weight: 400;
 
 }
-.search {
-  color: var(--background);
-  position: absolute;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.75rem;
-  top: -10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 3px 6px;
-  border-radius: 2px;
-}
-.icon-container:hover .search {
-	background: var(--color);
-}
-
 .rotate img {
 	animation: rotate .8s linear infinite;
 }
-
 @-webkit-keyframes rotate {
     from{
         -webkit-transform: rotate(0deg);

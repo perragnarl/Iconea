@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 				'<svg class="icon">' +
 					'<use xlink:href="icons/symbol/svg/sprite.symbol.svg#' + filename + '"></use>' +
 				'</svg>' +
-				'<span class="search">' + filename + '</span>' +
+				'<span class="name">' + filename + '</span>' +
 			'</div>'
 			counter++;
 		}
